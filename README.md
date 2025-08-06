@@ -2,7 +2,7 @@
 
 A curl-like HTTP request parser and executor that processes reqline statements and executes HTTP requests with proper syntax validation.
 
-## 🚀 Features
+## Features
 
 - **No Regex Parsing**: Uses character-by-character parsing for complete control
 - **Strict Syntax Validation**: Enforces all specified reqline syntax rules
@@ -10,11 +10,11 @@ A curl-like HTTP request parser and executor that processes reqline statements a
 - **Comprehensive Error Handling**: Provides specific error messages for syntax violations
 - **Template Architecture**: Follows MVC pattern with clean separation of concerns
 
-## 🛠️ Installation & Setup
+## Installation & Setup
 
 1. **Clone the repository:**
    ```bash
-   git clone <your-repo-url>
+   git clone <https://github.com/Aksheg/reqline-parser.git>
    cd reqline-parser
    ```
 
@@ -32,7 +32,7 @@ A curl-like HTTP request parser and executor that processes reqline statements a
 
 4. **Server will start on port 8000** (or PORT from environment variables)
 
-## 📡 API Usage
+## API Usage
 
 ### Endpoint
 - **URL:** `POST /`
@@ -76,7 +76,7 @@ A curl-like HTTP request parser and executor that processes reqline statements a
 }
 ```
 
-## 📝 Reqline Syntax
+## Reqline Syntax
 
 ### Syntax Rules
 - **Keywords:** All keywords must be UPPERCASE (`HTTP`, `URL`, `HEADERS`, `QUERY`, `BODY`)
@@ -90,7 +90,7 @@ A curl-like HTTP request parser and executor that processes reqline statements a
 HTTP [METHOD] | URL [URL_VALUE] | [OPTIONAL_SECTIONS]
 ```
 
-## ✅ Valid Examples
+## Valid Examples
 
 ### GET Requests
 ```bash
@@ -110,7 +110,7 @@ HTTP POST | URL https://dummyjson.com/posts/add | HEADERS {"Authorization": "Bea
 HTTP POST | URL https://api.example.com/posts | HEADERS {"Content-Type": "application/json"} | QUERY {"debug": "true"} | BODY {"title": "Complete Example", "userId": 1}
 ```
 
-## 🧪 Testing
+## Testing
 
 ### Run Test Suite
 ```bash
@@ -142,7 +142,7 @@ curl -X POST http://localhost:8000/ \
   -d '{"reqline": "HTTP get | URL https://dummyjson.com/quotes/3"}'
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 ```bash
@@ -155,7 +155,7 @@ NODE_ENV=development
 - **axios**: HTTP client for making requests
 - **dotenv**: Environment variable management
 
-## 🏗️ Architecture
+## Architecture
 
 ### Parser Logic
 - **Character-by-character parsing** (no regex)
@@ -173,7 +173,7 @@ Client Request → Endpoint Handler → Parser Service → HTTP Request → Resp
 - Consistent error codes using `/core/errors/`
 - Graceful error responses with specific validation messages
 
-## 📊 Performance
+## Performance
 
 - **Timing**: Millisecond precision for request duration
 - **Memory**: Efficient character-by-character parsing
