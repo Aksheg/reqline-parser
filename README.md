@@ -14,7 +14,7 @@ A curl-like HTTP request parser and executor that processes reqline statements a
 
 1. **Clone the repository:**
    ```bash
-   git clone <https://github.com/Aksheg/reqline-parser.git>
+   git clone <repo-url>
    cd reqline-parser
    ```
 
