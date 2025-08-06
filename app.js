@@ -36,6 +36,23 @@ function loadEndpoints() {
 
 loadEndpoints();
 
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: 'Reqline Parser API is running',
+    version: '1.0.0',
+    status: 'healthy'
+  });
+});
+
+app.get('/health', (req, res) => {
+  res.json({
+    success: true,
+    message: 'Server is healthy',
+    timestamp: new Date().toISOString()
+  });
+});
+
 app.use((err, req, res, next) => {
   console.error('Error:', err.message);
   res.status(500).json({
