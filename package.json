@@ -1,0 +1,23 @@
+{
+  "name": "reqline-parser",
+  "version": "1.0.0",
+  "description": "A curl-like tool parser for HTTP requests",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node test/reqline-parser.test.js"
+  },
+  "dependencies": {
+    "axios": "^1.11.0",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2"
+  },
+  "keywords": [
+    "parser",
+    "http",
+    "curl",
+    "api"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
